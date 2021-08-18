@@ -1,0 +1,30 @@
+.games-grid {
+  display: grid;
+  width: 95%;
+  margin: 3rem auto 10rem auto;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+  row-gap: 5rem;
+}
+
+.game {
+  box-shadow: $box-shadow-light;
+  cursor: pointer;
+  transition: 0.2s all;
+
+  &:hover {
+    box-shadow: $box-shadow-medium;
+  }
+
+  &__name {
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1.6rem;
+    transition: 0.2s all;
+  }
+
+  &:hover &__name {
+    color: $color-primary-light;
+    font-weight: bold;
+  }
+}

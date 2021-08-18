@@ -1,0 +1,61 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == big-screen {
+    @media only screen and (min-width: 100em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == bigTablet-land {
+    @media only screen and (max-width: 85.38em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-land {
+    @media only screen and (max-width: 69.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-port {
+    @media only screen and (max-width: 57em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == smallTablet-port {
+    @media only screen and (max-width: 48.13em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == bigPhone-land {
+    @media only screen and (max-width: 52.13em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-land {
+    @media only screen and (max-width: 42em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-land-height {
+    @media only screen and (max-height: 26em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == bigPhone-port {
+    @media only screen and (max-width: 26em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-port {
+    @media only screen and (max-width: 23.5em) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 3px solid $color-primary-light;
+}
+
+.logo {
+  width: 13rem;
+}
+
+.copyright {
+  font-size: 1.3rem;
+}

@@ -1,0 +1,15 @@
+.search {
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 2rem 0;
+  box-shadow: $box-shadow-light;
+  outline: none;
+  font-family: inherit;
+  font-size: 1.4rem;
+  text-align: center;
+
+  &:focus {
+    box-shadow: $box-shadow-medium;
+  }
+}
