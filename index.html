@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Free Games Data Base</title>
+    <title>Free Games</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +17,7 @@
   <body>
     <!-- HEADER -->
     <header class="header">
-      <img src="./img/logo2.png" alt="" class="logo" />
+      <img src="./img/logo.png" alt="" class="logo" />
       <span class="copyright"
         >&copy; 2021 - Daniel Fontoura (practice project)</span
       >
@@ -113,22 +113,31 @@
     </div>
     <!-- MODAL -->
     <div class="modal">
+      <span class="close-modal">+</span>
       <div class="modal__container">
         <img src="./img/dota-2-1.jpg" alt="" class="modal__image" />
         <div class="modal__content">
           <h2 class="modal__title">Dauntless</h2>
-          <p class="modal__description">
-            A free-to-play, co-op action RPG with gameplay similar to Monster
-            Hunter.
-          </p>
-          <p class="modal__genre">Genre: MMORPG</p>
-          <p class="modal__dev">Developers: Phoenix Labs, Iron Galaxy</p>
-          <a
-            class="modal__site"
-            href="https://www.freetogame.com/open/dauntless"
-            >Website</a
-          >
-          <p class="modal__release">Release date: 21/05/2019</p>
+          <ul class="modal__list">
+            <li class="modal__description">
+              A free-to-play, co-op action RPG with gameplay similar to Monster
+              Hunter.
+            </li>
+            <li>
+              <a
+                class="modal__site"
+                href="https://www.freetogame.com/open/dauntless"
+                >Website</a
+              >
+            </li>
+            <li class="modal__genre"><span>Genre:</span> MMORPG</li>
+            <li class="modal__dev">
+              <span>Developers:</span> Phoenix Labs, Iron Galaxy
+            </li>
+            <li class="modal__release">
+              <span>Release date:</span> 21/05/2019
+            </li>
+          </ul>
         </div>
       </div>
     </div>
