@@ -65,3 +65,8 @@
   cursor: pointer;
   transform: rotateZ(45deg);
 }
+
+.modal.active-modal {
+  opacity: 1;
+  display: grid;
+}

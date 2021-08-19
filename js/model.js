@@ -1,3 +1,5 @@
+import API_KEY from './secrets.js'
+
 async function getData() {
   const res = await fetch(
     'https://free-to-play-games-database.p.rapidapi.com/api/games',
@@ -5,7 +7,7 @@ async function getData() {
       method: 'GET',
       headers: {
         'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
-        'x-rapidapi-key': 'a123bf2cb2mshd5fa2af593ef59ap120794jsn6fe472401051',
+        'x-rapidapi-key': API_KEY,
       },
     }
   )
