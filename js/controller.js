@@ -1,1 +1,1 @@
-import * from './model.js'
+import * as model from './model.js'
