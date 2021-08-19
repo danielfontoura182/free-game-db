@@ -10,7 +10,7 @@
     $color-primary-medium
   );
   text-transform: uppercase;
-  padding: 2rem;
+  padding: 1.5rem 0;
   font-size: 1.4rem;
   letter-spacing: 0.1rem;
   color: $color-main-white;
@@ -19,7 +19,8 @@
   display: grid;
   place-items: center;
   text-align: center;
-  max-width: 20%;
+  width: 16.666%;
+  box-shadow: $box-shadow-light;
 
   &:hover {
     background-image: linear-gradient(
