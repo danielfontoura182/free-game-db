@@ -15,18 +15,28 @@ title: "Dauntless"
 
 */
 async function getData() {
-  const res = await fetch(
-    'https://free-to-play-games-database.p.rapidapi.com/api/games',
-    {
-      method: 'GET',
-      headers: {
-        'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
-        'x-rapidapi-key': API_KEY,
-      },
-    }
-  )
-  const data = await res.json()
-  console.log(data)
+  try {
+    const res = await fetch(
+      'https://free-to-play-games-database.p.rapidapi.com/api/games',
+      {
+        method: 'GET',
+        headers: {
+          'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
+          'x-rapidapi-key': API_KEY,
+        },
+      }
+    )
+    const data = await res.json()
+    return data
+  } catch (err) {
+    console.log(err)
+    throw err
+  }
 }
 
-getData()
+export const state = {}
+
+export async function setState() {
+  const data = await getData()
+  state.games = data
+}
