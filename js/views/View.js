@@ -1,8 +1,14 @@
 export default class View {
   _data
 
-  render(data) {
+  render(data, modal = false) {
     if (!data) this.renderError()
+
+    if (modal) {
+      const markup = this._generateMarkup(data)
+      this._parentElement.insertAdjacentHTML('beforeend', markup)
+      return
+    }
 
     this._data = data
     const markup = this._generateMarkup()

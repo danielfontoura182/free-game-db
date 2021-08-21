@@ -17,6 +17,7 @@ class ModalView extends View {
             </li>
             <li>
               <a
+                target="_blank"
                 class="modal__site"
                 href="${game.game_url}"
                 >Website</a
@@ -38,3 +39,5 @@ class ModalView extends View {
 
   _clear() {}
 }
+
+export default new ModalView()

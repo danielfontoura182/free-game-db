@@ -7,12 +7,10 @@
   background: rgba(0, 0, 0, 0.9);
   display: grid;
   place-items: center;
-  opacity: 0;
-  display: none;
 
   &__container {
     width: 90%;
-    max-width: 80rem;
+    max-width: 50rem;
     background: $color-main-white;
     box-shadow: $box-shadow-medium;
   }
@@ -64,9 +62,4 @@
   color: crimson;
   cursor: pointer;
   transform: rotateZ(45deg);
-}
-
-.modal.active-modal {
-  opacity: 1;
-  display: grid;
 }

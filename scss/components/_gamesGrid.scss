@@ -14,6 +14,7 @@
 
   &:hover {
     box-shadow: $box-shadow-medium;
+    transform: translateY(-5px);
   }
 
   &__name {
