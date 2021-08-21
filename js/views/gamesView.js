@@ -7,7 +7,7 @@ class gamesView extends View {
     const markup = this._data
       .map(
         (game) => ` 
-      <div class="game">
+      <div class="game" data-id="${game.id}">
       <img
         src="${game.thumbnail}"
         alt=""
