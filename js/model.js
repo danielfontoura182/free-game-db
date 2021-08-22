@@ -36,7 +36,17 @@ async function getData() {
 
 export const state = {}
 
+function formatDate(data) {
+  const formatted = data
+
+  formatted.forEach((game) => {
+    game.release_date = new Date(game.release_date).toLocaleDateString()
+  })
+  return formatted
+}
+
 export async function setState() {
   const data = await getData()
-  state.games = data
+  const dataFormatted = formatDate(data)
+  state.games = dataFormatted
 }
