@@ -7,6 +7,7 @@ async function controlGames() {
     await model.setState()
     gamesView.render(model.state.games)
     controlModal()
+    controlGenres()
   } catch (err) {
     console.log(err)
     throw err
@@ -29,9 +30,6 @@ function controlModal() {
 
     // close modal
     const modal = document.querySelector('.modal')
-    modal.addEventListener('keydown', (e) => {
-      console.log(e)
-    })
     modal.addEventListener('click', (e) => {
       if (
         e.target.classList.contains('modal') ||
@@ -48,6 +46,24 @@ function openModal(game) {
 
 function closeModal() {
   document.querySelector('.modal').remove()
+}
+
+function controlGenres() {
+  const containers = [
+    document.querySelector('.main-container'),
+    document.querySelector('.genres-container'),
+  ]
+
+  containers.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      const filteredData = model.state.games.filter(
+        (game) =>
+          game.genre.toLowerCase().trim() ===
+          e.target.textContent.toLowerCase().trim()
+      )
+      gamesView.render(filteredData)
+    })
+  })
 }
 
 function init() {
