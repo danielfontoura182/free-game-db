@@ -4,8 +4,19 @@
   margin: 3rem auto 10rem auto;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 2rem;
-  row-gap: 5rem;
+  row-gap: 6rem;
   flex: 1 1 auto;
+  @include respond(smallTablet-port) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond(bigPhone-port) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(phone-port) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .game {

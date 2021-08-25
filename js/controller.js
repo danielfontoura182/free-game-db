@@ -62,7 +62,7 @@ function controlGenres() {
           e.target.textContent.toLowerCase().trim()
       )
       gamesView.render(filteredData)
-      window.scrollTo(0, 200)
+      window.scrollTo(0, 350)
     })
   })
 }

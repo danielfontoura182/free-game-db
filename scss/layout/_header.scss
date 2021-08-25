@@ -3,6 +3,10 @@
   justify-content: space-around;
   align-items: center;
   border-bottom: 3px solid $color-primary-light;
+
+  @include respond(phone-port) {
+    flex-direction: column;
+  }
 }
 
 .logo {
@@ -12,6 +16,9 @@
 
 .copyright {
   font-size: 1.3rem;
+  @include respond(phone-port) {
+    margin-bottom: 1rem;
+  }
 }
 
 .title {

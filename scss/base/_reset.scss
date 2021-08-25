@@ -10,6 +10,13 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   height: 100%;
+  @include respond(big-screen) {
+    font-size: 68.5%;
+  }
+
+  @include respond(phone-land) {
+    font-size: 60.5%;
+  }
 }
 
 body {

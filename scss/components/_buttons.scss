@@ -22,6 +22,15 @@
   width: 16.666%;
   box-shadow: $box-shadow-light;
 
+  @include respond(bigPhone-port) {
+    width: 50%;
+  }
+
+  @include respond(phone-land) {
+    width: 33%;
+    padding: 2.5rem 0;
+  }
+
   &:hover {
     background-image: linear-gradient(
       to right bottom,
