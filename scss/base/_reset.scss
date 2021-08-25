@@ -9,11 +9,15 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  height: 100%;
 }
 
 body {
   font-family: 'Georama', sans-serif;
   position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
