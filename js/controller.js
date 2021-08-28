@@ -9,6 +9,7 @@ async function controlGames() {
     controlModal()
     controlGenres()
     controlOderBy()
+    controlAllGamesButton()
   } catch (err) {
     console.log(err)
     throw err
@@ -64,6 +65,8 @@ function controlGenres() {
       )
       model.setCurrentState(filteredData)
       gamesView.render(filteredData)
+      controlAllGamesButton(true)
+
       // set selected option back to unordered
       document.getElementById('order-selection').value = 'unordered'
       window.scrollTo(0, 350)
@@ -88,6 +91,21 @@ function controlOderBy() {
       gamesView.render(model.currentState.games)
     }
   })
+}
+
+function controlAllGamesButton(active = false) {
+  const allGamesBtn = document.querySelector('.all-games-button')
+
+  allGamesBtn.addEventListener('click', () => {
+    gamesView.render(model.state.games)
+    model.setCurrentState(model.state.games)
+    allGamesBtn.classList.remove('active')
+  })
+
+  if (active) {
+    allGamesBtn.classList.add('active')
+    return
+  }
 }
 
 function init() {
