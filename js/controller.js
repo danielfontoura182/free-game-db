@@ -8,6 +8,7 @@ async function controlGames() {
     gamesView.render(model.state.games)
     controlModal()
     controlGenres()
+    controlOderBy()
   } catch (err) {
     console.log(err)
     throw err
@@ -61,9 +62,31 @@ function controlGenres() {
           game.genre.toLowerCase().trim() ===
           e.target.textContent.toLowerCase().trim()
       )
+      model.setCurrentState(filteredData)
       gamesView.render(filteredData)
+      // set selected option back to unordered
+      document.getElementById('order-selection').value = 'unordered'
       window.scrollTo(0, 350)
     })
+  })
+}
+
+function controlOderBy() {
+  const orderSelection = document.getElementById('order-selection')
+
+  orderSelection.addEventListener('change', (e) => {
+    const value = orderSelection.value
+
+    if (value === 'name') {
+      const ordered = [...model.currentState.games]
+      gamesView.render(
+        ordered.sort((a, b) => {
+          return a.title > b.title ? 1 : b.title > a.title ? -1 : 0
+        })
+      )
+    } else {
+      gamesView.render(model.currentState.games)
+    }
   })
 }
 
