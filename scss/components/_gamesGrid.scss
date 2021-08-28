@@ -6,6 +6,7 @@
   column-gap: 2rem;
   row-gap: 6rem;
   flex: 1 1 auto;
+  position: relative;
   @include respond(smallTablet-port) {
     grid-template-columns: repeat(3, 1fr);
   }

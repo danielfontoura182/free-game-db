@@ -4,6 +4,7 @@ import modalView from './views/modalView.js'
 
 async function controlGames() {
   try {
+    gamesView.renderSpinner()
     await model.setState()
     gamesView.render(model.state.games)
     controlModal()

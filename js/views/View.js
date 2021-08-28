@@ -28,4 +28,12 @@ export default class View {
   _clear() {
     this._parentElement.innerHTML = ''
   }
+
+  renderSpinner() {
+    const markup = `
+    <div class="loader"></div>
+    `
+    this._clear()
+    this._parentElement.insertAdjacentHTML('afterbegin', markup)
+  }
 }

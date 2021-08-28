@@ -1,0 +1,21 @@
+/* LOAD SPINNER */
+.loader {
+  border: 1rem solid $color-offWhite;
+  border-top: 1rem solid $color-primary-light;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  animation: spin 0.6s linear infinite;
+  position: absolute;
+  top: 10%;
+  left: 45%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
