@@ -36,4 +36,14 @@ export default class View {
     this._clear()
     this._parentElement.insertAdjacentHTML('afterbegin', markup)
   }
+
+  renderNoMatch() {
+    this._clear()
+    const markup = `
+    <div class="no-match">
+      Sorry, no game found. <br> Try searching for another one.
+    </div>
+    `
+    this._parentElement.insertAdjacentHTML('beforeend', markup)
+  }
 }

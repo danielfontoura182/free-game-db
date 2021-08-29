@@ -11,6 +11,7 @@ async function controlGames() {
     controlGenres()
     controlOderBy()
     controlAllGamesButton()
+    controlSearch()
   } catch (err) {
     console.log(err)
     throw err
@@ -107,6 +108,34 @@ function controlAllGamesButton(active = false) {
     allGamesBtn.classList.add('active')
     return
   }
+}
+
+function controlSearch() {
+  const search = document.querySelector('.search')
+
+  search.addEventListener('keyup', function () {
+    renderMatches(this)
+    window.scrollTo(0, 350)
+  })
+}
+
+function findMatches(toMatch, data) {
+  return data.filter((item) => {
+    const regex = new RegExp(toMatch, 'gi')
+    return item.title.match(regex)
+  })
+}
+
+function renderMatches(search) {
+  const matchResult = findMatches(search.value, model.state.games)
+
+  if (!matchResult || matchResult.length === 0) {
+    gamesView.renderNoMatch()
+    return
+  }
+
+  model.setCurrentState(matchResult)
+  gamesView.render(matchResult)
 }
 
 function init() {

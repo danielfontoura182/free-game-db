@@ -59,3 +59,13 @@
   margin: 0 auto;
   align-items: center;
 }
+
+.no-match {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: crimson;
+  font-size: 1.5rem;
+  text-align: center;
+}
