@@ -12,6 +12,7 @@ async function controlGames() {
     controlOderBy()
     controlAllGamesButton()
     controlSearch()
+    controlBackToTop()
   } catch (err) {
     console.log(err)
     throw err
@@ -71,7 +72,7 @@ function controlGenres() {
 
       // set selected option back to unordered
       document.getElementById('order-selection').value = 'unordered'
-      window.scrollTo(0, 350)
+      window.scrollTo({ top: 350, behavior: 'smooth' })
     })
   })
 }
@@ -102,6 +103,7 @@ function controlAllGamesButton(active = false) {
     gamesView.render(model.state.games)
     model.setCurrentState(model.state.games)
     allGamesBtn.classList.remove('active')
+    window.scrollTo({ top: 350, behavior: 'smooth' })
   })
 
   if (active) {
@@ -115,7 +117,7 @@ function controlSearch() {
 
   search.addEventListener('keyup', function () {
     renderMatches(this)
-    window.scrollTo(0, 350)
+    window.scrollTo({ top: 350, behavior: 'smooth' })
   })
 }
 
@@ -136,6 +138,14 @@ function renderMatches(search) {
 
   model.setCurrentState(matchResult)
   gamesView.render(matchResult)
+}
+
+function controlBackToTop() {
+  const backTop = document.querySelector('.back-to-top')
+
+  backTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  })
 }
 
 function init() {
