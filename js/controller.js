@@ -103,6 +103,7 @@ function controlAllGamesButton(active = false) {
     gamesView.render(model.state.games)
     model.setCurrentState(model.state.games)
     allGamesBtn.classList.remove('active')
+
     window.scrollTo({ top: 350, behavior: 'smooth' })
   })
 
@@ -121,6 +122,16 @@ function controlSearch() {
     renderMatches(this)
     controlAllGamesButton(true)
     window.scrollTo({ top: 350, behavior: 'smooth' })
+    window.addEventListener('click', (e) => {
+      console.log(e.target)
+      if (
+        e.target.classList.contains('all-games-button') ||
+        e.target.classList.contains('genre') ||
+        e.target.classList.contains('main-genre__description')
+      ) {
+        search.value = ''
+      }
+    })
 
     if (this.value === '') {
       controlAllGamesButton()
