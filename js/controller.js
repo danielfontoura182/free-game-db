@@ -110,6 +110,8 @@ function controlAllGamesButton(active = false) {
     allGamesBtn.classList.add('active')
     return
   }
+
+  allGamesBtn.classList.remove('active')
 }
 
 function controlSearch() {
@@ -117,7 +119,12 @@ function controlSearch() {
 
   search.addEventListener('keyup', function () {
     renderMatches(this)
+    controlAllGamesButton(true)
     window.scrollTo({ top: 350, behavior: 'smooth' })
+
+    if (this.value === '') {
+      controlAllGamesButton()
+    }
   })
 }
 
