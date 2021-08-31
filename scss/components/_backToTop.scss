@@ -1,6 +1,6 @@
 .back-to-top {
   position: fixed;
-  top: 87vh;
+  top: 90vh;
   right: 1.5rem;
   background-image: linear-gradient(
     to right bottom,
@@ -12,7 +12,15 @@
   cursor: pointer;
 
   &__icon {
-    font-size: 5rem;
+    font-size: 4rem;
     color: $color-main-white;
+  }
+
+  @include respond(bigTablet-port) {
+    top: 93vh;
+  }
+
+  @include respond(bigPhone-port) {
+    top: 90vh;
   }
 }
