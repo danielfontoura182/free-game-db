@@ -25,6 +25,7 @@
   cursor: pointer;
   transition: 0.2s all;
   height: 19rem;
+  position: relative;
 
   &:hover {
     box-shadow: $box-shadow-medium;
@@ -40,5 +41,34 @@
 
   &:hover &__name {
     font-weight: bold;
+  }
+}
+
+.game-info-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: 0.2s all;
+  display: grid;
+  place-items: center;
+  color: $color-main-white;
+  padding: 1rem;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  span {
+    color: $color-primary-light;
+    font-weight: bold;
+    font-size: 1.3rem;
   }
 }

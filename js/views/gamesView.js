@@ -14,7 +14,12 @@ class gamesView extends View {
         class="game__image"
       />
       <div class="game__name">${game.title}</div>
+      <div class="game-info-hover" data-id="${game.id}">
+      ${game.short_description} <br><br>
+      <span>Click to see more.</span>
     </div>
+    </div>
+    
       `
       )
       .join('')

@@ -24,7 +24,7 @@ function controlModal() {
   gamesGrid.addEventListener('click', (e) => {
     const target = e.target.closest('div')
 
-    if (!target.classList.contains('game')) {
+    if (!target.classList.contains('game-info-hover')) {
       return
     }
 
