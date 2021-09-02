@@ -72,3 +72,12 @@
     font-size: 1.3rem;
   }
 }
+
+.current-genre {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: $color-primary-light;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}

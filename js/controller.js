@@ -59,6 +59,8 @@ function controlGenres() {
     document.querySelector('.genres-container'),
   ]
 
+  const currentGenre = document.querySelector('.current-genre')
+
   containers.forEach((el) => {
     el.addEventListener('click', (e) => {
       const filteredData = model.state.games.filter(
@@ -66,6 +68,7 @@ function controlGenres() {
           game.genre.toLowerCase().trim() ===
           e.target.textContent.toLowerCase().trim()
       )
+      currentGenre.textContent = e.target.textContent
       model.setCurrentState(filteredData)
       gamesView.render(filteredData)
       controlAllGamesButton(true)
@@ -98,8 +101,10 @@ function controlOderBy() {
 
 function controlAllGamesButton(active = false) {
   const allGamesBtn = document.querySelector('.all-games-button')
+  const currentGenre = document.querySelector('.current-genre')
 
   allGamesBtn.addEventListener('click', () => {
+    currentGenre.textContent = 'All games'
     gamesView.render(model.state.games)
     model.setCurrentState(model.state.games)
     allGamesBtn.classList.remove('active')
@@ -117,6 +122,7 @@ function controlAllGamesButton(active = false) {
 
 function controlSearch() {
   const search = document.querySelector('.search')
+  const currentGenre = document.querySelector('.current-genre')
 
   search.addEventListener('keyup', function () {
     renderMatches(this)
@@ -133,7 +139,10 @@ function controlSearch() {
       }
     })
 
+    currentGenre.textContent = ''
+
     if (this.value === '') {
+      currentGenre.textContent = 'All games'
       controlAllGamesButton()
     }
   })
