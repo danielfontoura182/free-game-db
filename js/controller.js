@@ -63,6 +63,7 @@ function controlGenres() {
 
   containers.forEach((el) => {
     el.addEventListener('click', (e) => {
+      e.preventDefault()
       const filteredData = model.state.games.filter(
         (game) =>
           game.genre.toLowerCase().trim() ===
@@ -103,7 +104,9 @@ function controlAllGamesButton(active = false) {
   const allGamesBtn = document.querySelector('.all-games-button')
   const currentGenre = document.querySelector('.current-genre')
 
-  allGamesBtn.addEventListener('click', () => {
+  allGamesBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+
     currentGenre.textContent = 'All games'
     gamesView.render(model.state.games)
     model.setCurrentState(model.state.games)
@@ -125,7 +128,9 @@ function controlSearch() {
   const search = document.querySelector('.search')
   const currentGenre = document.querySelector('.current-genre')
 
-  search.addEventListener('keyup', function () {
+  search.addEventListener('keyup', function (e) {
+    e.preventDefault()
+
     renderMatches(this)
     controlAllGamesButton(true)
     window.scrollTo({ top: 350, behavior: 'smooth' })
@@ -171,7 +176,9 @@ function renderMatches(search) {
 function controlBackToTop() {
   const backTop = document.querySelector('.back-to-top')
 
-  backTop.addEventListener('click', () => {
+  backTop.addEventListener('click', (e) => {
+    e.preventDefault()
+
     window.scrollTo({ top: 0, behavior: 'smooth' })
   })
 }
