@@ -133,7 +133,7 @@ function controlSearch() {
 
     renderMatches(this)
     controlAllGamesButton(true)
-    window.scrollTo({ top: 350, behavior: 'smooth' })
+    window.scrollTo({ top: 450, behavior: 'smooth' })
     window.addEventListener('click', (e) => {
       console.log(e.target)
       if (
