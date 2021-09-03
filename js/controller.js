@@ -75,7 +75,7 @@ function controlGenres() {
 
       // set selected option back to unordered
       document.getElementById('order-selection').value = 'unordered'
-      window.scrollTo({ top: 350, behavior: 'smooth' })
+      window.scrollTo({ top: 350 })
     })
   })
 }
@@ -109,7 +109,7 @@ function controlAllGamesButton(active = false) {
     model.setCurrentState(model.state.games)
     allGamesBtn.classList.remove('active')
 
-    window.scrollTo({ top: 350, behavior: 'smooth' })
+    window.scrollTo({ top: 350 })
   })
 
   if (active) {
@@ -127,7 +127,7 @@ function controlSearch() {
   search.addEventListener('keyup', function () {
     renderMatches(this)
     controlAllGamesButton(true)
-    window.scrollTo({ top: 350, behavior: 'smooth' })
+    window.scrollTo({ top: 350 })
     window.addEventListener('click', (e) => {
       console.log(e.target)
       if (
@@ -171,7 +171,7 @@ function controlBackToTop() {
   const backTop = document.querySelector('.back-to-top')
 
   backTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({ top: 0 })
   })
 }
 

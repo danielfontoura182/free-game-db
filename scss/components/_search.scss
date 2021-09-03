@@ -3,6 +3,8 @@
   border: none;
   background: none;
   padding: 2rem 0;
+  -webkit-box-shadow: $box-shadow-light;
+  -moz-box-shadow: $box-shadow-light;
   box-shadow: $box-shadow-light;
   outline: none;
   font-family: inherit;
@@ -10,6 +12,8 @@
   text-align: center;
 
   &:focus {
+    -webkit-box-shadow: $box-shadow-medium;
+    -moz-box-shadow: $box-shadow-medium;
     box-shadow: $box-shadow-medium;
   }
 }
