@@ -108,6 +108,7 @@ function controlAllGamesButton(active = false) {
     gamesView.render(model.state.games)
     model.setCurrentState(model.state.games)
     allGamesBtn.classList.remove('active')
+    document.getElementById('order-selection').value = 'unordered'
 
     window.scrollTo({ top: 350, behavior: 'smooth' })
   })
