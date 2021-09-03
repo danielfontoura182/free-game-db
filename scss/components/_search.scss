@@ -10,6 +10,7 @@
   font-family: inherit;
   font-size: 1.4rem;
   text-align: center;
+  border-bottom: 1px solid $color-grey;
 
   &:focus {
     -webkit-box-shadow: $box-shadow-medium;
