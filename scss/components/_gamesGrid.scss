@@ -63,8 +63,10 @@
   line-height: 1.5;
   letter-spacing: 0.1rem;
 
-  &:hover {
-    opacity: 1;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      opacity: 1;
+    }
   }
 
   span {
