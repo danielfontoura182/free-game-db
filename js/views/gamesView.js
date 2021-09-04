@@ -18,7 +18,7 @@ class gamesView extends View {
       ${
         game.short_description.length < 120
           ? game.short_description
-          : game.short_description.slice(0, 120) + '...'
+          : game.short_description.slice(0, 120).trim() + '...'
       } <br><br>
       <span>Click to see more.</span>
     </div>
