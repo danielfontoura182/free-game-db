@@ -20,4 +20,4 @@ Some extra features: - Back to top button - Back to all games button
 
 ## API
 
-This project is powered by, [Free-to-Play Games Database](https://rapidapi.com/digiwalls/api/free-to-play-games-database).
+This project is powered by [Free-to-Play Games Database](https://rapidapi.com/digiwalls/api/free-to-play-games-database).
