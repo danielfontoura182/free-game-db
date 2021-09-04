@@ -15,7 +15,11 @@ class gamesView extends View {
       />
       <div class="game__name">${game.title}</div>
       <div class="game-info-hover" data-id="${game.id}">
-      ${game.short_description} <br><br>
+      ${
+        game.short_description.length < 120
+          ? game.short_description
+          : game.short_description.slice(0, 120) + '...'
+      } <br><br>
       <span>Click to see more.</span>
     </div>
     </div>
