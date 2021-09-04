@@ -4,13 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 html {
   font-size: 62.5%;
   overflow-x: hidden;
   height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 
   @include respond(big-screen) {
     font-size: 68.5%;
