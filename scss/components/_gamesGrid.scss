@@ -21,6 +21,19 @@
   }
 }
 
+.game-container {
+  &__name {
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1.6rem;
+    transition: 0.2s all;
+  }
+
+  &:hover &__name {
+    font-weight: bold;
+  }
+}
+
 .game {
   box-shadow: $box-shadow-light;
   cursor: pointer;
@@ -32,17 +45,6 @@
   &:hover {
     box-shadow: $box-shadow-medium;
     transform: translateY(-5px);
-  }
-
-  &__name {
-    margin: 1rem 0;
-    text-align: center;
-    font-size: 1.6rem;
-    transition: 0.2s all;
-  }
-
-  &:hover &__name {
-    font-weight: bold;
   }
 }
 
